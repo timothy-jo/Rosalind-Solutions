@@ -1,0 +1,16 @@
+newadult = 0 #rabbits that are about to become adults
+adult = 0 #rabbits that are already adults
+children = 1 #young rabits that haven't reached the reproductive age
+
+n = 5
+k = 3 
+
+counter = 1 
+
+while counter < n:
+    newadult = adult + children #rabbits that will be considered adults = number of adults + number of children 
+    children = adult * k #number of rabbit pairs that will be born 
+    adult = newadult #rabbits that will be considered adults actually becoming adults in the next generation
+    counter += 1 
+
+print(adult + children)
